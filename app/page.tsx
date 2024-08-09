@@ -18,7 +18,7 @@ export default function Home() {
             </span>
           </h1>
           <h1>
-            I'M{" "}
+            I&apos;M{" "}
             <span className="font-extrabold text-[#cd5ff8]">
               RITIK PRAJAPAT
             </span>
