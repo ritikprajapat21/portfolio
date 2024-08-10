@@ -22,11 +22,11 @@ export default function Home() {
           </h1>
           <h1>
             I&apos;M{" "}
-            <span className="font-extrabold bg-gradient-to-t text-transparent bg-clip-text from-purple-900 to-purple-400">
+            <span className="font-bold bg-gradient-to-t text-transparent bg-clip-text from-purple-900 to-purple-400">
               RITIK PRAJAPAT
             </span>
           </h1>
-          <div className="font-extrabold pt-12 bg-gradient-to-t text-transparent bg-clip-text from-purple-900 to-purple-400">
+          <div className="font-bold pt-12 bg-gradient-to-t text-transparent bg-clip-text from-purple-900 to-purple-400">
             <Type />
           </div>
         </div>
@@ -43,7 +43,7 @@ export default function Home() {
       </div>
       <div className="text-pretty !leading-tight pb-16 md:mb-20 lg:mb-24">
         <div>
-          <h1>
+          <h1 className="text-center">
             LET ME{" "}
             <span className="bg-clip-text text-transparent bg-gradient-to-t from-purple-900 to-purple-400">
               INTRODUCE
