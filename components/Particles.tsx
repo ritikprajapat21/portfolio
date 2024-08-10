@@ -1,57 +1,97 @@
 "use client";
+import { useCallback } from "react";
 import Particles from "react-tsparticles";
+import { loadSlim } from "tsparticles-slim";
 
 function Particle() {
+  const particlesInit = useCallback(async (main: any) => {
+    await loadSlim(main);
+  }, []);
+
   return (
     <Particles
-      id="tsparticles"
-      className="bg-cover fixed bg-no-repeat"
-      params={{
-        fullScreen: {
-          enable: true,
-          zIndex: -1,
-        },
-        particles: {
-          number: {
-            value: 160,
-            density: {
-              enable: true,
-              value_area: 1500,
-            },
-          },
-          line_linked: {
-            enable: true,
-            opacity: 0.03,
-          },
-          move: {
-            direction: "right",
-            speed: 0.05,
-          },
-          size: {
-            value: 1,
-          },
-          opacity: {
-            anim: {
-              enable: true,
-              speed: 1,
-              opacity_min: 0.05,
-            },
+      className="bg-cover h-screen fixed bg-no-repeat"
+      init={particlesInit}
+      options={{
+        background: {
+          color: {
+            value: "transparent",
           },
         },
+        fpsLimit: 120,
         interactivity: {
           events: {
-            onclick: {
+            onClick: {
               enable: true,
               mode: "push",
             },
+            onHover: {
+              enable: true,
+              mode: "repulse",
+            },
+            resize: true,
           },
           modes: {
+            bubble: {
+              distance: 400,
+              duration: 2,
+              opacity: 0.8,
+              size: 40,
+            },
             push: {
-              particles_nb: 1,
+              quantity: 4,
+            },
+            repulse: {
+              distance: 100,
+              duration: 0.4,
             },
           },
         },
-        retina_detect: true,
+        fullScreen: {
+          enable: true,
+          zIndex: -10,
+        },
+        particles: {
+          color: {
+            value: "#ffffff",
+          },
+          links: {
+            color: "#ffffff",
+            distance: 150,
+            enable: true,
+            opacity: 0.5,
+            width: 1,
+          },
+          collisions: {
+            enable: true,
+          },
+          move: {
+            direction: "top",
+            enable: true,
+            outMode: "out",
+            random: false,
+            speed: 3,
+            straight: false,
+          },
+          number: {
+            density: {
+              enable: true,
+              area: 800,
+            },
+            value: 50,
+          },
+          opacity: {
+            value: 0.9,
+          },
+          shape: {
+            type: "edge",
+          },
+          size: {
+            random: true,
+            value: 3,
+          },
+        },
+        detectRetina: true,
       }}
     />
   );

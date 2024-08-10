@@ -8,16 +8,14 @@ const MaxWidthContainer = ({
   className?: string;
 }) => {
   return (
-    <main
+    <div
       className={cn(
-        "flex min-h-screen flex-col items-center justify-between pt-20 px-8 md:px-12 lg:px-24",
+        "flex min-h-screen flex-col items-center justify-between pt-24 px-8 md:px-12 lg:px-24",
         className,
       )}
     >
-      <div className="z-10 w-full max-w-5xl items-center justify-between font-mono text-sm lg:flex">
-        {children}
-      </div>
-    </main>
+      {children}
+    </div>
   );
 };
 

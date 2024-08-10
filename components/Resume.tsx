@@ -1,15 +1,13 @@
-import MaxWidthContainer from "./MaxWidthContainer";
-
 const Resume = () => {
   return (
-    <MaxWidthContainer>
+    <div className="w-full h-full">
       <object
         type="application/pdf"
         data="Ritik_Prajapat_Resume.pdf"
         width="100%"
         className="min-h-screen"
       >
-        <p>
+        <p className="text-3xl md:text-4xl lg:text-5xl">
           Error:{" "}
           <a
             className="text-purple-900 underline hover:text-purple-400"
@@ -20,7 +18,7 @@ const Resume = () => {
           for resume
         </p>
       </object>
-    </MaxWidthContainer>
+    </div>
   );
 };
 

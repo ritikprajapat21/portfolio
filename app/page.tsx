@@ -4,9 +4,9 @@ import Image from "next/image";
 
 export default function Home() {
   return (
-    <MaxWidthContainer>
-      <div className="w-full flex flex-col sm:flex-row items-center justify-center mx-auto">
-        <div className="text-3xl grow">
+    <MaxWidthContainer className="lg:pt-28">
+      <div className="!leading-tight text-balance grid grid-rows-2 md:grid-rows-none md:grid-cols-2">
+        <div className="h-fit">
           <h1 className="pb-4">
             Hi There!&nbsp;
             <span
@@ -19,11 +19,11 @@ export default function Home() {
           </h1>
           <h1>
             I&apos;M{" "}
-            <span className="font-extrabold text-[#cd5ff8]">
+            <span className="font-extrabold bg-gradient-to-t text-transparent bg-clip-text from-purple-900 to-purple-400">
               RITIK PRAJAPAT
             </span>
           </h1>
-          <div className="font-extrabold pt-12 text-[#cd5ff8]">
+          <div className="font-extrabold pt-12 bg-gradient-to-t text-transparent bg-clip-text from-purple-900 to-purple-400">
             <Type />
           </div>
         </div>
@@ -33,6 +33,7 @@ export default function Home() {
             width={386}
             alt="Home image"
             src="home-main.svg"
+            className="h-full w-full"
             priority={false}
           />
         </div>
