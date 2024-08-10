@@ -4,8 +4,7 @@ import "./globals.css";
 import { ThemeProvider } from "@/components/ThemeProvider";
 import Particle from "@/components/Particles";
 import Navbar from "@/components/Navbar";
-import { ScrollArea } from "@/components/ui/scroll-area";
-
+import Footer from "@/components/Footer";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
@@ -22,13 +21,12 @@ export default function RootLayout({
     <html lang="en">
       <body className={inter.className}>
         <ThemeProvider attribute="class" defaultTheme="dark">
-          <ScrollArea className="min-h-screen">
-            <div className="fixed pt-4 left-1/2 right-1/2">
-              <Navbar />
-            </div>
-            <Particle />
-            <main className="text-4xl md:text-5xl lg:text-6xl">{children}</main>
-          </ScrollArea>
+          <div className="fixed pt-4 left-1/2 right-1/2">
+            <Navbar />
+          </div>
+          <Particle />
+          <main className="text-4xl md:text-5xl lg:text-6xl">{children}</main>
+          <Footer />
         </ThemeProvider>
       </body>
     </html>
