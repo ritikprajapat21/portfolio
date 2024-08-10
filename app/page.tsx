@@ -92,7 +92,7 @@ export default function Home() {
                 alt="Avatar"
                 width={368}
                 height={368}
-                className="w-60 h-60 md:w-full md:h-full"
+                className="-z-10 w-60 h-60 md:w-full md:h-full"
               />
             </Tilt>
           </div>

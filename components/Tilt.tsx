@@ -42,7 +42,7 @@ export const Tilt = ({ children }: { children: React.ReactNode }) => {
   return (
     <>
       <div
-        className="relative -z-10 transition-[all_400ms_cubic-bezier(0.03,0.98,0.52,0.99)_0s] will-change-transform"
+        className="relative transition-[all_400ms_cubic-bezier(0.03,0.98,0.52,0.99)_0s] will-change-transform"
         onMouseMove={onMouseMove}
         onMouseLeave={onMouseLeave}
         style={{
