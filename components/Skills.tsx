@@ -21,7 +21,10 @@ const Skills = () => {
     <div className="pt-12 grid grid-cols-3 md:grid-cols-4 gap-4 md:gap-6">
       {technologies.map((tech) => {
         return (
-          <Card className="flex justify-center p-2 items-center bg-gradient-to-tl from-blue-600 via-purple-600 to-indigo-300">
+          <Card
+            key={tech.name}
+            className="flex justify-center p-2 items-center bg-gradient-to-tl from-blue-600 via-purple-600 to-indigo-300"
+          >
             <Image src={tech.icon} width={100} height={100} alt="Tech" />
           </Card>
         );
