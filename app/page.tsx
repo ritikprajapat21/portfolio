@@ -2,7 +2,6 @@ import Links from "@/components/Links";
 import MaxWidthContainer from "@/components/MaxWidthContainer";
 import Tilt from "@/components/Tilt";
 import Type from "@/components/Type";
-import { Github } from "lucide-react";
 import Image from "next/image";
 
 export default function Home() {
