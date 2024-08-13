@@ -6,6 +6,7 @@ import Particle from "@/components/Particles";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 const inter = Inter({ subsets: ["latin"] });
+import { Analytics } from "@vercel/analytics/react";
 
 export const metadata: Metadata = {
   title: "Ritik Prajapat | Portfolio",
@@ -20,6 +21,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={inter.className}>
+        <Analytics />
         <ThemeProvider attribute="class" defaultTheme="dark">
           <div className="fixed pt-4 left-1/2 right-1/2">
             <Navbar />

@@ -13,10 +13,12 @@ const Page = () => {
   return (
     <MaxWidthContainer className="text-center">
       <div className="w-full flex flex-col items-center justify-center gap-4">
-        <Button className="w-fit flex items-center justify-center gap-2">
-          <ArrowDownToLine />
-          Download Resume
-        </Button>
+        <a href="Ritik_Prajapat_Resume.pdf" target="_blank">
+          <Button className="w-fit flex items-center justify-center gap-2">
+            <ArrowDownToLine />
+            Download Resume
+          </Button>
+        </a>
         <Resume />
       </div>
     </MaxWidthContainer>
