@@ -12,14 +12,19 @@ const Resume = dynamic(() => import("@/components/Resume"), {
 const Page = () => {
   return (
     <MaxWidthContainer className="text-center">
-      <div className="w-full flex flex-col items-center justify-center gap-4">
-        <a href="Ritik_Prajapat_Resume.pdf" target="_blank">
+      <div className="w-full grid grid-rows-[50px_1fr] place-items-center gap-4">
+        <a
+          href="https://drive.google.com/file/d/1axu9esY396e3kQDl8amUmJTn-NOiYp6R/view"
+          target="_blank"
+        >
           <Button className="w-fit flex items-center justify-center gap-2">
             <ArrowDownToLine />
             Download Resume
           </Button>
         </a>
-        <Resume />
+        <div className="w-full h-full">
+          <Resume />
+        </div>
       </div>
     </MaxWidthContainer>
   );
