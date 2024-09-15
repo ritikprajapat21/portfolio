@@ -23,17 +23,21 @@ const Projects = async () => {
     <div className="mt-6 md:mt-8 lg:mt-10 grid grid-cols-1 md:grid-cols-3 gap-4">
       {projects ? (
         projects.map(
-          (project: {
-            id: number;
-            name: string;
-            description: string;
-            html_url: string;
-            homepage: string;
-            topics: string[];
-          }) => (
+          (
+            project: {
+              id: number;
+              name: string;
+              description: string;
+              html_url: string;
+              homepage: string;
+              topics: string[];
+            },
+            index: number,
+          ) => (
             <Card
               key={project.id}
-              className="grid hover:scale-110 hover:transition-all hover:duration-700"
+              className="grid transition-transform duration-300 ease-in-out hover:scale-110 animate-slide-up"
+              style={{ animationDelay: `${index * 100}ms` }}
             >
               <CardHeader>
                 <CardTitle className="capitalize">{project.name}</CardTitle>

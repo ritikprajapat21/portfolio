@@ -31,7 +31,7 @@ const Skills = () => {
             <>
               <Tooltip key={tech.name}>
                 <TooltipTrigger asChild key={tech.name}>
-                  <Card className="flex justify-center p-2 items-center bg-gradient-to-tl from-blue-600 via-purple-600 to-indigo-300 hover:transition-all hover:duration-300 hover:scale-125">
+                  <Card className="flex justify-center p-2 items-center bg-gradient-to-tl from-blue-600 via-purple-600 to-indigo-300 transition-all duration-300 hover:scale-125 animate-slide-up">
                     <Image
                       src={tech.icon}
                       width={100}

@@ -84,11 +84,16 @@ const config = {
             transform: "rotate(-4deg)",
           },
         },
+        "slide-up": {
+          "0%": { transform: "translateY(100%)", opacity: "0" },
+          "100%": { transform: "translateY(0)", opacity: "1" },
+        },
       },
       animation: {
         "accordion-down": "accordion-down 0.2s ease-out",
         "accordion-up": "accordion-up 0.2s ease-out",
         wave: "wave 2s ease infinite",
+        "slide-up": "slide-up 0.7s ease-out forwards",
       },
     },
   },
