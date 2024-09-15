@@ -26,7 +26,7 @@ export default function Page() {
             <ul className="!leading-normal text-balance text-xl pl-12 list-disc pt-2 lg:pt-4">
               <li>Playing Games</li>
               <li>Reading novel</li>
-              <li>Twiching around in Linux</li>
+              <li>Twiching around in Linux and Neovim</li>
             </ul>
           </div>
         </div>

@@ -10,7 +10,7 @@ const Navbar = () => {
   ];
 
   return (
-    <nav className="w-fit z-10 -translate-x-1/2 rounded-3xl bg-purple-400/20 backdrop-blur-md p-3 md:px-6">
+    <nav className="w-fit z-[100] -translate-x-1/2 rounded-3xl bg-purple-400/20 backdrop-blur-md p-3 md:px-6">
       <div className="flex flex-row gap-6 vs:gap-4 md:gap-10 items-center justify-center">
         {links.map((link) => {
           return (
