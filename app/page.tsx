@@ -1,13 +1,14 @@
+import * as motion from "framer-motion/client";
+import Image from "next/image";
 import Links from "@/components/Links";
 import MaxWidthContainer from "@/components/MaxWidthContainer";
 import Tilt from "@/components/Tilt";
 import Type from "@/components/Type";
-import Image from "next/image";
 
 export default function Home() {
   return (
     <MaxWidthContainer className="lg:pt-28">
-      <div className="!leading-tight text-balance grid grid-flow-row auto-rows-min gap-y-6 sm:grid-cols-2 pb-12 md:pb-20">
+      <motion.div initial={{ opacity: 0, x: "-50%" }} animate={{ opacity: [0, 1], x: 0 }} transition={{ duration: 0.5, type: "spring", damping: 10, stiffness: 80 }} className="!leading-tight text-balance grid grid-flow-row auto-rows-min gap-y-6 sm:grid-cols-2 pb-12 md:pb-20">
         <div>
           <h1 className="pb-4">
             Hi There!&nbsp;
@@ -39,8 +40,8 @@ export default function Home() {
             priority={false}
           />
         </div>
-      </div>
-      <div className="text-pretty !leading-tight pb-16 md:mb-20 lg:mb-24">
+      </motion.div>
+      <motion.div initial={{ opacity: 0, scale: 0.5 }} whileInView={{ opacity: 1, scale: 1 }} transition={{ duration: 0.5, type: "spring", damping: 10, stiffness: 100 }} className="text-pretty !leading-tight pb-16 md:mb-20 lg:mb-24">
         <div>
           <h1 className="text-center">
             LET ME{" "}
@@ -96,8 +97,8 @@ export default function Home() {
             </Tilt>
           </div>
         </div>
-      </div>
-      <div className="flex flex-col gap-4 justify-center">
+      </motion.div>
+      <motion.div initial={{ opacity: 0, x: "50%" }} whileInView={{ opacity: 1, x: 0 }} transition={{ duration: 0.5, type: "spring", damping: 10, stiffness: 100 }} className="flex flex-col gap-4 justify-center">
         <div className="text-center pb-3">
           <h1 className="uppercase">Find me on</h1>
           <p className="text-2xl">
@@ -111,7 +112,7 @@ export default function Home() {
         <div>
           <Links className="bg-gradient-to-tl from-blue-600 via-purple-600 to-indigo-600" />
         </div>
-      </div>
+      </motion.div>
     </MaxWidthContainer>
   );
 }

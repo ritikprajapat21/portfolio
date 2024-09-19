@@ -1,11 +1,12 @@
 import MaxWidthContainer from "@/components/MaxWidthContainer";
+import * as motion from "framer-motion/client";
 import Skills from "@/components/Skills";
 
 export default function Page() {
   return (
     <section>
       <MaxWidthContainer>
-        <div>
+        <motion.div initial={{ opacity: 0, x: "-50%" }} animate={{ opacity: [0, 1], x: 0 }} transition={{ duration: 0.5, type: "spring", damping: 10, stiffness: 100 }}>
           <h1 className="pb-12 md:pb-16 lg:pb-18 text-center">
             Know Who{" "}
             <span className="bg-clip-text text-transparent bg-gradient-to-t from-purple-900 to-purple-400">
@@ -29,13 +30,13 @@ export default function Page() {
               <li>Twiching around in Linux and Neovim</li>
             </ul>
           </div>
-        </div>
-        <div className="mt-12 md:mt-16">
+        </motion.div>
+        <motion.div initial={{ opacity: 0, y: "50%" }} whileInView={{ opacity: 1, y: 0 }} viewport={{ amount: 0.1 }} transition={{ duration: 0.5 }} className="mt-12 md:mt-16">
           <h1 className="text-center font-bold bg-clip-text text-transparent bg-gradient-to-t from-purple-900 to-purple-400">
             Skills
           </h1>
           <Skills />
-        </div>
+        </motion.div>
       </MaxWidthContainer>
     </section>
   );

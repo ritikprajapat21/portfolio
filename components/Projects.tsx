@@ -1,5 +1,6 @@
-import { Github, LaptopMinimal } from "lucide-react";
+import * as motion from "framer-motion/client";
 import { Button } from "./ui/button";
+import { Github, LaptopMinimal } from "lucide-react";
 import {
   Card,
   CardContent,
@@ -8,17 +9,16 @@ import {
   CardHeader,
   CardTitle,
 } from "./ui/card";
-import { Badge } from "./ui/badge";
-import Link from "next/link";
 import Image from "next/image";
+import Link from "next/link";
+import { Badge } from "./ui/badge";
 
 const Projects = async () => {
   const data = await fetch(
     "https://api.github.com/users/ritikprajapat21/starred",
-    { cache: "no-cache" },
+    { cache: "default" },
   );
   const projects = await data.json();
-  console.log(projects);
 
   return (
     <div className="container mx-auto px-4 py-8 mb-20">
@@ -36,37 +36,41 @@ const Projects = async () => {
               },
               index: number,
             ) => (
-              <Card
-                key={project.id}
-                className="z-[-1] grid transition-transform duration-300 ease-in-out hover:scale-110 hover:cursor-pointer animate-slide-up"
-                style={{ animationDelay: `${index * 100}ms` }}
-              >
-                <CardHeader>
-                  <CardTitle className="capitalize">{project.name}</CardTitle>
-                  <CardDescription>{project.description}</CardDescription>
-                </CardHeader>
-                <CardContent className="flex flex-wrap gap-1">
-                  {project.topics.map((topic: string) => (
-                    <Badge className="capitalize" key={topic}>
-                      {topic}
-                    </Badge>
-                  ))}
-                </CardContent>
-                <CardFooter className="flex justify-evenly items-center w-full place-self-end">
-                  <Link href={project.html_url}>
-                    <Button className="flex gap-2">
-                      <Github /> Github
-                    </Button>
-                  </Link>
-                  {project.homepage && (
-                    <Link href={project.homepage}>
-                      <Button className="flex gap-2">
-                        <LaptopMinimal /> Demo
-                      </Button>
-                    </Link>
-                  )}
-                </CardFooter>
-              </Card>
+              <motion.div key={project.id} initial={{ opacity: 0, y: "50%" }} animate={{ opacity: [0, 1], y: 0 }} transition={{ delay: index / 5, type: "spring", damping: 10, stiffness: 100 }}>
+                <Card
+                  className="z-[-1] h-full grid hover:cursor-pointer"
+                >
+                  <CardHeader>
+                    <CardTitle className="capitalize">{project.name}</CardTitle>
+                    <CardDescription>{project.description}</CardDescription>
+                  </CardHeader>
+                  <CardContent className="flex flex-wrap gap-1">
+                    {project.topics.map((topic: string) => (
+                      <Badge className="capitalize h-5" key={topic}>
+                        {topic}
+                      </Badge>
+                    ))}
+                  </CardContent>
+                  <CardFooter className="flex justify-evenly items-center w-full place-self-end">
+                    <motion.span whileHover={{ scale: 1.2 }} whileTap={{ scale: 0.9 }}>
+                      <Link href={project.html_url} target="_blank">
+                        <Button className="flex gap-2">
+                          <Github /> Github
+                        </Button>
+                      </Link>
+                    </motion.span>
+                    {project.homepage && (
+                      <motion.span whileHover={{ scale: 1.2 }} whileTap={{ scale: 0.9 }}>
+                        <Link href={project.homepage} target="_blank">
+                          <Button className="flex gap-2">
+                            <LaptopMinimal /> Demo
+                          </Button>
+                        </Link>
+                      </motion.span>
+                    )}
+                  </CardFooter>
+                </Card>
+              </motion.div>
             ),
           )
         ) : (
