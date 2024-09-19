@@ -98,7 +98,7 @@ export default function Home() {
           </div>
         </div>
       </motion.div>
-      <motion.div initial={{ opacity: 0, x: "50%" }} whileInView={{ opacity: 1, x: 0 }} transition={{ duration: 0.5, type: "spring", damping: 10, stiffness: 100 }} className="flex flex-col gap-4 justify-center">
+      <motion.div initial={{ opacity: 0, y: "50%" }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 0.5, type: "spring", damping: 10, stiffness: 100 }} className="flex flex-col gap-4 justify-center">
         <div className="text-center pb-3">
           <h1 className="uppercase">Find me on</h1>
           <p className="text-2xl">
