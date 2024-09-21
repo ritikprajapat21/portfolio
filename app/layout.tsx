@@ -5,8 +5,9 @@ import { ThemeProvider } from "@/components/ThemeProvider";
 import Particle from "@/components/Particles";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
-import Analytics from "@/components/Analytics";
 const inter = Inter({ subsets: ["latin"] });
+import { Analytics } from "@vercel/analytics/react";
+import GoogleAnalytics from "@/components/Analytics";
 
 export const metadata: Metadata = {
   title: "Ritik Prajapat | Portfolio",
@@ -22,6 +23,7 @@ export default function RootLayout({
     <html lang="en">
       <body className={inter.className}>
         <Analytics />
+        <GoogleAnalytics />
         <ThemeProvider attribute="class" defaultTheme="dark">
           <div className="fixed pt-4 left-1/2 right-1/2">
             <Navbar />

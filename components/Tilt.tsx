@@ -18,6 +18,7 @@ function throttle<T extends (...args: any[]) => any>(
 
 export const Tilt = ({ children }: { children: React.ReactNode }) => {
   const [rotate, setRotate] = useState({ x: 0, y: 0 });
+  console.log(process.env.NEXT_PUBLIC_MEASUREMENT_ID);
 
   const onMouseMove = useCallback(
     throttle((e: MouseEvent<HTMLDivElement>) => {
