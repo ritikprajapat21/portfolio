@@ -2,6 +2,10 @@ import * as motion from "framer-motion/client";
 import MaxWidthContainer from "@/components/MaxWidthContainer";
 import Projects from "@/components/Projects";
 
+export const metadata = {
+  title: "Projects",
+}
+
 export default function Page() {
   return (
     <section>

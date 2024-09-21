@@ -2,6 +2,10 @@ import MaxWidthContainer from "@/components/MaxWidthContainer";
 import * as motion from "framer-motion/client";
 import Skills from "@/components/Skills";
 
+export const metadata = {
+  title: "About",
+};
+
 export default function Page() {
   return (
     <section>

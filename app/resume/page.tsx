@@ -10,6 +10,10 @@ const Resume = dynamic(() => import("@/components/Resume"), {
   ),
 });
 
+export const metadata = {
+  title: "Resume",
+}
+
 const Page = () => {
   return (
     <MaxWidthContainer className="text-center">
