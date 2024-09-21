@@ -5,8 +5,8 @@ import { ThemeProvider } from "@/components/ThemeProvider";
 import Particle from "@/components/Particles";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
+import Analytics from "@/components/Analytics";
 const inter = Inter({ subsets: ["latin"] });
-import { Analytics } from "@vercel/analytics/react";
 
 export const metadata: Metadata = {
   title: "Ritik Prajapat | Portfolio",
