@@ -32,7 +32,7 @@ const Education = () => {
       <div className="rounded-2xl border p-5">
         <p className="font-medium">{EDUCATION.degree}</p>
         <p className="text-sm text-neutral-600 dark:text-neutral-400">
-          {EDUCATION.school} · {EDUCATION.cgpa}
+          {EDUCATION.school}
         </p>
         <div className="mt-4">
           <div className="text-sm font-medium mb-2">Certifications</div>

@@ -120,7 +120,7 @@ export const PROJECTS = [
     ],
     challenges: ["Kept PRs small and review‑friendly"],
     links: {
-      demo: "https://github.com/MODSetter/SurfSense",
+      demo: "https://www.surfsense.net/",
       code: "https://github.com/MODSetter/SurfSense/pull/183",
     },
   },
