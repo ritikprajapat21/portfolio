@@ -1,11 +1,4 @@
-import {
-  Code2,
-  Download,
-  Github,
-  Linkedin,
-  LinkIcon,
-  Mail,
-} from "lucide-react";
+import { Code2, Download, Github, Linkedin, Mail } from "lucide-react";
 import { PROFILE } from "@/app/data";
 import ButtonLink from "./ButtonLink";
 import Section from "./Section";
