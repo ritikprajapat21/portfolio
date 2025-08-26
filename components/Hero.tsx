@@ -1,3 +1,5 @@
+"use client";
+import { useGSAP } from "@gsap/react";
 import {
   Code2,
   Cpu,
@@ -9,17 +11,66 @@ import {
   Wrench,
 } from "lucide-react";
 import { PROFILE } from "@/app/data";
+import Border from "./Border";
 import ButtonLink from "./ButtonLink";
+import gsap from "gsap";
+import { SplitText } from "gsap/all";
+import { useRef } from "react";
+
+gsap.registerPlugin(SplitText);
 
 const Hero = () => {
+  const containerRef = useRef(null);
+  useGSAP(
+    () => {
+      const titleText = new SplitText("h1", { type: "words" });
+      const paraText = new SplitText("p", { type: "lines" });
+
+      const tl = gsap.timeline({
+        scrollTrigger: {
+          trigger: "#hero",
+          start: "top center",
+        },
+      });
+
+      tl.from(titleText.words, {
+        yPercent: 100,
+        opacity: 0,
+        stagger: 0.1,
+        ease: "power1.inOut",
+      });
+
+      tl.from(paraText.lines, {
+        yPercent: 100,
+        opacity: 0,
+        stagger: 0.1,
+        ease: "power1.inOut",
+      });
+
+      tl.from(
+        "li",
+        {
+          yPercent: 100,
+          opacity: 0,
+          stagger: 0.1,
+          ease: "power1.inOut",
+        },
+        "-=0.2",
+      );
+    },
+    { scope: containerRef },
+  );
+
   return (
-    <section id="hero" className="relative overflow-hidden">
+    <section ref={containerRef} id="hero" className="relative overflow-hidden">
       <div className="max-w-6xl mx-auto px-4 py-24 md:py-28 grid md:grid-cols-2 gap-8 items-center">
         <div>
-          <div className="inline-flex items-center gap-2 rounded-full border px-3 py-1 text-xs mb-4">
-            <Sparkles className="h-4 w-4" />
-            Emerging Developer
-          </div>
+          <Border>
+            <div className="inline-flex bg-neutral-900 items-center gap-2 rounded-full border border-neutral-900/80 px-3 py-1 text-xs">
+              <Sparkles className="h-4 w-4" />
+              Emerging Developer
+            </div>
+          </Border>
           <h1 className="text-3xl md:text-5xl font-bold leading-tight">
             Building the Future with Code
           </h1>

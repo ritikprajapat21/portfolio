@@ -43,7 +43,7 @@ export const PROJECTS = [
     tagline: "AI‑powered platform to create, voice, and publish podcasts",
     description:
       "Generate scripts, realistic voiceovers, and thumbnails with an intuitive creator UI.",
-    tech: ["Next.js", "TailwindCSS", "OpenAI LLM", "Clerk", "Convex"],
+    tech: ["Next.js", "TailwindCSS", "OpenAI LLM", "Clerk", "Convex", "DALL.E"],
     features: [
       "AI script generation + voice synthesis",
       "Auto thumbnail creation",

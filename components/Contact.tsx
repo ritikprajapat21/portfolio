@@ -1,16 +1,34 @@
+"use client";
+import { useGSAP } from "@gsap/react";
+import gsap from "gsap";
+import { SplitText } from "gsap/all";
 import { Code2, Download, Github, Linkedin, Mail } from "lucide-react";
 import { PROFILE } from "@/app/data";
 import ButtonLink from "./ButtonLink";
 import Section from "./Section";
 
 const Contact = () => {
+  useGSAP(() => {
+    const text = new SplitText("#contact p, #contact li", {
+      type: "lines",
+    });
+
+    gsap.from(text.lines, {
+      scrollTrigger: {
+        trigger: "#contact",
+        start: "top 70%",
+      },
+      yPercent: 100,
+      stagger: 0.08,
+      opacity: 0,
+    });
+  });
+
   return (
     <Section id="contact" icon={Mail} title="Contact & Links">
       <div className="rounded-2xl border p-5 grid md:grid-cols-2 gap-5 items-start">
         <div>
-          <div className="text-lg font-semibold">
-            Let’s build something great
-          </div>
+          <p className="text-lg font-semibold">Let’s build something great</p>
           <p className="mt-2 text-sm text-neutral-700 dark:text-neutral-300">
             I’m actively looking for entry‑level roles and internships. Email me
             or reach out on LinkedIn.

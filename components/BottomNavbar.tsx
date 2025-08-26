@@ -14,7 +14,8 @@ const BottomNavbar = () => {
     const timeline = gsap.timeline({
       scrollTrigger: {
         trigger: "#hero",
-        start: "bottom 90%",
+        start: "bottom 85%",
+        end: "bottom center",
         scrub: true,
       },
     });

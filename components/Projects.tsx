@@ -1,11 +1,28 @@
 "use client";
+import { useGSAP } from "@gsap/react";
+import gsap from "gsap";
 import { Code2, Github, Globe } from "lucide-react";
 import { PROJECTS } from "@/app/data";
 import ButtonLink from "./ButtonLink";
 import Pill from "./Pill";
 import Section from "./Section";
 
+//Todo: Horizontal cards?
 const Projects = () => {
+  useGSAP(() => {
+    const projects = gsap.utils.toArray(".fade-in");
+
+    gsap.from(projects, {
+      scrollTrigger: {
+        trigger: "#projects",
+        start: "top 60%",
+      },
+      yPercent: 100,
+      opacity: 0,
+      stagger: 0.3,
+    });
+  });
+
   return (
     <Section id="projects" icon={Code2} title="Featured Projects">
       <p className="text-sm text-neutral-600 dark:text-neutral-400 mb-6">
@@ -14,7 +31,10 @@ const Projects = () => {
       </p>
       <div className="grid md:grid-cols-2 gap-6">
         {PROJECTS.map((p) => (
-          <div key={p.title} className="rounded-2xl border p-5 flex flex-col">
+          <div
+            key={p.title}
+            className="rounded-2xl border p-5 flex flex-col fade-in"
+          >
             <div className="flex items-center justify-between gap-3">
               <h3 className="text-lg font-semibold">{p.title}</h3>
             </div>
@@ -27,24 +47,24 @@ const Projects = () => {
                 <Pill key={t}>{t}</Pill>
               ))}
             </div>
-            <div className="mt-4 grid grid-cols-2 gap-4 text-sm">
-              <div>
-                <h4 className="font-medium mb-1">Key features</h4>
-                <ul className="list-disc ml-5 space-y-1">
-                  {p.features.map((f) => (
-                    <li key={f}>{f}</li>
-                  ))}
-                </ul>
-              </div>
-              <div>
-                <h4 className="font-medium mb-1">Challenges & solutions</h4>
-                <ul className="list-disc ml-5 space-y-1">
-                  {p.challenges.map((c) => (
-                    <li key={c}>{c}</li>
-                  ))}
-                </ul>
-              </div>
-            </div>
+            {/* <div className="mt-4 grid grid-cols-2 gap-4 text-sm"> */}
+            {/*   <div> */}
+            {/*     <h4 className="font-medium mb-1">Key features</h4> */}
+            {/*     <ul className="list-disc ml-5 space-y-1"> */}
+            {/*       {p.features.map((f) => ( */}
+            {/*         <li key={f}>{f}</li> */}
+            {/*       ))} */}
+            {/*     </ul> */}
+            {/*   </div> */}
+            {/*   <div> */}
+            {/*     <h4 className="font-medium mb-1">Challenges & solutions</h4> */}
+            {/*     <ul className="list-disc ml-5 space-y-1"> */}
+            {/*       {p.challenges.map((c) => ( */}
+            {/*         <li key={c}>{c}</li> */}
+            {/*       ))} */}
+            {/*     </ul> */}
+            {/*   </div> */}
+            {/* </div> */}
             <div className="mt-4 flex items-center gap-3">
               <ButtonLink
                 href={p.links.demo || "#"}
