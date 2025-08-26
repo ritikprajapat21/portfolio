@@ -1,5 +1,7 @@
 "use client";
 import { useGSAP } from "@gsap/react";
+import gsap from "gsap";
+import { SplitText } from "gsap/all";
 import {
   Code2,
   Cpu,
@@ -10,12 +12,10 @@ import {
   Sparkles,
   Wrench,
 } from "lucide-react";
+import { useRef } from "react";
 import { PROFILE } from "@/app/data";
 import Border from "./Border";
 import ButtonLink from "./ButtonLink";
-import gsap from "gsap";
-import { SplitText } from "gsap/all";
-import { useRef } from "react";
 
 gsap.registerPlugin(SplitText);
 

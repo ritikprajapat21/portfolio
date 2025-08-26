@@ -45,20 +45,20 @@ const BottomNavbar = () => {
     >
       <div className="max-w-fit px-2 h-14 flex items-center justify-center">
         <nav className="flex items-center gap-5 text-sm">
-          <a href="#summary" className="hover:opacity-70 appear">
+          <a href="#summary" className="appear hover:underline">
             About
           </a>
-          <a href="#skills" className="hover:opacity-70 appear">
+          <a href="#skills" className="appear hover:underline">
             Skills
           </a>
           <ArrowDown className="will-fade absolute left-1/2 -translate-x-1/2 -z-10" />
-          <a href="#projects" className="hover:opacity-70 appear">
+          <a href="#projects" className="appear hover:underline">
             Projects
           </a>
-          <a href="#education" className="hover:opacity-70 appear">
+          <a href="#education" className="appear hover:underline">
             Education
           </a>
-          <a href="#contact" className="hover:opacity-70 appear">
+          <a href="#contact" className="appear hover:underline">
             Contact
           </a>
         </nav>

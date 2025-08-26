@@ -5,7 +5,7 @@ export const PROFILE = {
   phone: "+91 9754892367",
   location: "India",
   resumeUrl:
-    "https://drive.google.com/file/d/1axu9esY396e3kQDl8amUmJTn-NOiYp6R/view", // TODO: replace with a hosted PDF URL
+    "https://drive.google.com/file/d/1axu9esY396e3kQDl8amUmJTn-NOiYp6R/view",
   github: "https://github.com/ritikprajapat21",
   linkedin: "https://www.linkedin.com/in/ritik-prajapat/",
   leetcode: "https://leetcode.com/u/ritikprajapati084/",
