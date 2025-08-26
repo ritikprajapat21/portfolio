@@ -7,7 +7,6 @@ import ButtonLink from "./ButtonLink";
 import Pill from "./Pill";
 import Section from "./Section";
 
-//Todo: Horizontal cards?
 const Projects = () => {
   useGSAP(() => {
     const projects = gsap.utils.toArray(".fade-in");

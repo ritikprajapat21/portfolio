@@ -79,7 +79,12 @@ const Hero = () => {
             workflows, and explore AI & blockchain.
           </p>
           <div className="mt-6 flex flex-wrap gap-3">
-            <ButtonLink href="#projects" icon={ExternalLink} variant="primary">
+            <ButtonLink
+              href="#projects"
+              target=""
+              icon={ExternalLink}
+              variant="primary"
+            >
               View My Work
             </ButtonLink>
             <ButtonLink href={PROFILE.github} icon={Github}>
