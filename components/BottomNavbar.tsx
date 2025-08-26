@@ -43,7 +43,7 @@ const BottomNavbar = () => {
       className="fixed bottom-4 left-1/2 -translate-x-1/2 -translate-y-1/2 max-w-fit rounded-3xl px-4 z-50 backdrop-blur border-b border-neutral-200/60 dark:border-neutral-800/60 bg-white/60 dark:bg-black/40"
     >
       <div className="max-w-fit px-2 h-14 flex items-center justify-center">
-        <nav className="hidden md:flex items-center gap-5 text-sm">
+        <nav className="flex items-center gap-5 text-sm">
           <a href="#summary" className="hover:opacity-70 appear">
             About
           </a>
