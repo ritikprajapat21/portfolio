@@ -66,7 +66,7 @@ const Hero = () => {
       <div className="max-w-6xl mx-auto px-4 py-24 md:py-28 grid md:grid-cols-2 gap-8 items-center">
         <div>
           <Border>
-            <div className="inline-flex bg-neutral-900 items-center gap-2 rounded-full border border-neutral-900/80 px-3 py-1 text-xs">
+            <div className="inline-flex bg-background items-center gap-2 rounded-full border border-neutral-900/80 px-3 py-1 text-xs">
               <Sparkles className="h-4 w-4" />
               Emerging Developer
             </div>

@@ -33,7 +33,7 @@ const Contact = () => {
             I’m actively looking for entry‑level roles and internships. Email me
             or reach out on LinkedIn.
           </p>
-          <div className="mt-4 flex flex-wrap gap-3">
+          <div className="mt-4 flex flex-wrap gap-3 items-center justify-center md:justify-start">
             <ButtonLink href={`mailto:${PROFILE.email}`} icon={Mail}>
               Email
             </ButtonLink>
