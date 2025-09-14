@@ -6,6 +6,7 @@
       "dependencies": {
         "@gsap/react": "^2.1.2",
         "@react-three/fiber": "^9.3.0",
+        "@vercel/analytics": "^1.5.0",
         "clsx": "^2.1.1",
         "gsap": "^3.13.0",
         "lucide-react": "^0.541.0",
@@ -169,6 +170,8 @@
     "@types/react-reconciler": ["@types/react-reconciler@0.32.0", "", { "peerDependencies": { "@types/react": "*" } }, "sha512-+WHarFkJevhH1s655qeeSEf/yxFST0dVRsmSqUgxG8mMOKqycgYBv2wVpyubBY7MX8KiX5FQ03rNIwrxfm7Bmw=="],
 
     "@types/webxr": ["@types/webxr@0.5.22", "", {}, "sha512-Vr6Stjv5jPRqH690f5I5GLjVk8GSsoQSYJ2FVd/3jJF7KaqfwPi3ehfBS96mlQ2kPCwZaX6U0rG2+NGHBKkA/A=="],
+
+    "@vercel/analytics": ["@vercel/analytics@1.5.0", "", { "peerDependencies": { "@remix-run/react": "^2", "@sveltejs/kit": "^1 || ^2", "next": ">= 13", "react": "^18 || ^19 || ^19.0.0-rc", "svelte": ">= 4", "vue": "^3", "vue-router": "^4" }, "optionalPeers": ["@remix-run/react", "@sveltejs/kit", "next", "react", "svelte", "vue", "vue-router"] }, "sha512-MYsBzfPki4gthY5HnYN7jgInhAZ7Ac1cYDoRWFomwGHWEX7odTEzbtg9kf/QSo7XEsEAqlQugA6gJ2WS2DEa3g=="],
 
     "base64-js": ["base64-js@1.5.1", "", {}, "sha512-AKpaYlHn8t4SVbOHCy+b5+KKgvR4vrsD8vbvrbiQJps7fKDTkjkDry6ji0rUJjC0kzbNePLwzxq8iypo41qeWA=="],
 
