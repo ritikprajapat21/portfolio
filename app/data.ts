@@ -154,9 +154,26 @@ export const EDUCATION = {
 };
 
 export const CERTS = [
-  "OCI AI Foundations Associate (2025)",
-  "Programming in Java",
-  "Database Management System",
+  {
+    name: "OCI Generative AI Professional (2025)",
+    link: "https://catalog-education.oracle.com/pls/certview/sharebadge?id=AAD2F5F22C2B275DE1EA6E0CD4071077D48F7129B3710914BA5FE8DC9864BA32",
+  },
+  {
+    name: "OCI Foundations Associate (2025)",
+    link: "https://catalog-education.oracle.com/pls/certview/sharebadge?id=35D7277E91258C9364BA67B070364CF1E4850AE13A9A2FAB46294986320356B3",
+  },
+  {
+    name: "OCI AI Foundations Associate (2025)",
+    link: "https://mylearn.oracle.com/api/badges/metadata/ou/learning-path/become-a-oci-ai-foundations-associate-2025/147781",
+  },
+  {
+    name: "Database Management System",
+    link: "https://www.linkedin.com/in/ritik-prajapat/details/certifications/1753277905105/single-media-viewer?type=IMAGE&profileId=ACoAADty0vcBbXgWBMlO2cWzJLqJLWb-nQ8Ry90&lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base_certifications_details%3BDvVllKoKSkSWGDp3GUhOLQ%3D%3D",
+  },
+  {
+    name: "Programming in Java",
+    link: "https://www.linkedin.com/in/ritik-prajapat/details/certifications/1753277875280/single-media-viewer?type=IMAGE&profileId=ACoAADty0vcBbXgWBMlO2cWzJLqJLWb-nQ8Ry90&lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base_certifications_details%3BDvVllKoKSkSWGDp3GUhOLQ%3D%3D",
+  },
 ];
 
 export const EXPERIENCE = [

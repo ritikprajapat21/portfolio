@@ -29,16 +29,23 @@ const Education = () => {
       icon={GraduationCap}
       title="Education & Certifications"
     >
-      <div className="rounded-2xl border p-5">
-        <p className="font-medium">{EDUCATION.degree}</p>
-        <p className="text-sm text-neutral-600 dark:text-neutral-400">
-          {EDUCATION.school}
-        </p>
+      <div className="rounded-2xl border p-5 flex flex-col md:flex-row justify-around">
+        <div className="flex flex-col items-start justify-center pb-3 md:pb-0">
+          <p className="font-medium">{EDUCATION.degree}</p>
+          <p className="text-sm text-neutral-600 dark:text-neutral-400">
+            {EDUCATION.school}
+          </p>
+        </div>
+        <div className="border " />
         <div className="mt-4">
           <div className="text-sm font-medium mb-2">Certifications</div>
           <ul className="list-disc ml-5 space-y-1 text-sm">
             {CERTS.map((c) => (
-              <li key={c}>{c}</li>
+              <li key={c.name}>
+                <a href={c.link} className="hover:underline" target="_blank">
+                  {c.name}
+                </a>
+              </li>
             ))}
           </ul>
         </div>

@@ -14,21 +14,13 @@ export default function Portfolio() {
   return (
     <main className="relative min-h-screen text-neutral-900 dark:text-neutral-100">
       <Navbar />
-      {/* Hero */}
       <Hero />
-      {/* Summary */}
       <Summary />
-      {/* Skills */}
       <Skills />
-      {/* Projects */}
       <Projects />
-      {/* Experience (optional for freshers but keeps your strong internship) */}
       <Experience />
-      {/* Education & Certifications */}
       <Education />
-      {/* Contact */}
       <Contact />
-      {/* Footer */}
       <Footer />
       <BottomNavbar />
     </main>
