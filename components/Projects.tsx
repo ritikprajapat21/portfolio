@@ -6,6 +6,7 @@ import { PROJECTS } from "@/app/data";
 import ButtonLink from "./ButtonLink";
 import Pill from "./Pill";
 import Section from "./Section";
+import clsx from "clsx";
 
 const Projects = () => {
   useGSAP(() => {
@@ -29,10 +30,13 @@ const Projects = () => {
         includes tech, features, challenges, and links.
       </p>
       <div className="grid md:grid-cols-2 gap-6">
-        {PROJECTS.map((p) => (
+        {PROJECTS.map((p, i) => (
           <div
             key={p.title}
-            className="rounded-2xl border p-5 flex flex-col fade-in"
+            className={clsx(
+              "rounded-2xl border p-5 flex flex-col fade-in",
+              i === PROJECTS.length - 1 && "justify-self-center md:col-span-2",
+            )}
           >
             <div className="flex items-center justify-between gap-3">
               <h3 className="text-lg font-semibold">{p.title}</h3>

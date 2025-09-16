@@ -39,6 +39,41 @@ export const SKILLS = {
 
 export const PROJECTS = [
   {
+    title: "CoverCraft",
+    tagline: "Generate professional cover letters and cold emails instantly",
+    description:
+      "Upload your resume and paste a job description; the app uses Gemini LLM to generate tailored cover letters or cold emails. You can download or copy the generated content, after signing in with Google OAuth.",
+    tech: [
+      "Next.js",
+      "Tailwind CSS",
+      "shadcn/ui",
+      "Auth.js (Google OAuth)",
+      "Gemini LLM",
+      "Vercel",
+      "TypeScript",
+    ],
+    features: [
+      "Secure login with Google OAuth",
+      "Upload resume",
+      "Paste job description",
+      "Generate cover letters or cold emails via AI",
+      "Download generated content as file",
+      "Copy to clipboard",
+      "Clean & responsive UI (powered by shadcn/ui + Tailwind CSS)",
+    ],
+    challenges: [
+      "Handling file uploads (resume) and parsing/processing them",
+      "Ensuring good prompt engineering / context for Gemini LLM so results are quality",
+      "Implementing download of generated content in a clean format (PDF or text file)",
+      "Maintaining responsive UI and good UX across devices",
+      "Managing authentication securely (OAuth tokens etc.)",
+    ],
+    links: {
+      demo: "https://cover-craft-one.vercel.app/",
+      code: "https://github.com/ritikprajapat21/covercraft",
+    },
+  },
+  {
     title: "Podcast Generator",
     tagline: "AI‑powered platform to create, voice, and publish podcasts",
     description:
